@@ -2,10 +2,7 @@ console.log('the bot is starting');
 
 var twit = require('twit'); //import twit package
 
-var T = new Twit({
-  consumer_key:         '...',
-  consumer_secret:      '...',
-  access_token:         '...',
-  access_token_secret:  '...' 
-})
+var config = require('./config.js'); //using config.js for storing keys 
+
+var T = new twit(config);
 
